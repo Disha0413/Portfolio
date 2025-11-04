@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disha Saini - Computer Science Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+            animation: fadeIn 1s ease-in;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.5em;
+            opacity: 0.9;
+        }
+
+        .contact-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-links a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        main {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: -30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            animation: slideUp 0.8s ease-out;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .experience-item, .project-item, .achievement-item {
+            background: #f8f9fa;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s;
+        }
+
+        .experience-item:hover, .project-item:hover, .achievement-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateX(5px);
+        }
+
+        .experience-item h3, .project-item h3, .achievement-item h3 {
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+
+        .experience-item p, .project-item p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .experience-item ul, .achievement-item ul {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .experience-item li, .achievement-item li {
+            margin-bottom: 8px;
+        }
+
+        .project-links {
+            margin-top: 10px;
+        }
+
+        .project-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .project-links a:hover {
+            color: #764ba2;
+        }
+
+        .education {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .cert-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+            font-size: 0.95em;
+        }
+
+        .achievement-badge {
+            display: inline-block;
+            background: #ffd700;
+            color: #333;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1.2em;
+            }
+            main {
+                padding: 20px;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Disha Saini</h1>
+            <p>Computer Science Engineering Student</p>
+            <p style="font-size: 1.1em; margin-top: 10px;">Roorkee, Uttarakhand</p>
+            <div class="contact-links">
+                <a href="mailto:22040587@coer.ac.in">📧 Email</a>
+                <a href="https://www.linkedin.com/in/disha-saini-9ba367283" target="_blank">💼 LinkedIn</a>
+                <a href="tel:+916397106462">📱 +91 6397106462</a>
+            </div>
+        </header>
+
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <p style="font-size: 1.1em; line-height: 1.8;">
+                    I'm a passionate Computer Science Engineering student at COER University with expertise in web development, cloud computing, AI/ML, and data analytics. I've completed multiple internships and won several hackathons, including 1st place at Internal Hackathon 2.0 for my IoT-driven smart farming project "Green Nest." I'm proficient in multiple languages including Mandarin Chinese (HSK Level 1 & 2) and love combining technology with creative problem-solving.
+                </p>
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                <div class="education">
+                    <h3>Bachelor of Technology in Computer Science Engineering</h3>
+                    <p>College of Engineering Roorkee (COER)</p>
+                    <p>Uttarakhand Technical University | 2022 - 2026</p>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Web Development</h3>
+                        <p>HTML, CSS, JavaScript, Python, AppSheet</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Cloud Computing</h3>
+                        <p>Google Cloud Platform, AWS, IAM, Load Balancing, Cloud Storage</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>AI & Machine Learning</h3>
+                        <p>Generative AI, NLP, ML APIs, AI Model Deployment</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Data Analytics</h3>
+                        <p>Data Analysis, Visualization, Data Modeling, Warehouse Design</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Cybersecurity</h3>
+                        <p>Ethical Hacking, Security Best Practices</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Tools & Database</h3>
+                        <p>Git, GitHub, VS Code, SQL</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience">
+                <h2>Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <h3>Business Analytics Intern</h3>
+                    <p><strong>A-One Seal & Packaging Co.</strong> | Remote | 3 months</p>
+                    <ul>
+                        <li>Analyzed and preprocessed structured datasets for business insights</li>
+                        <li>Optimized SQL queries to improve data retrieval efficiency</li>
+                        <li>Created visual dashboards to track KPIs and performance metrics</li>
+                        <li>Collaborated with teams to translate raw data into strategic insights</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Web Development Intern</h3>
+                    <p><strong>InternPe</strong> | Remote | 1 month</p>
+                    <ul>
+                        <li>Built a To-Do List Web App with dynamic task management</li>
+                        <li>Designed an Amazon Landing Page Clone with responsive layout</li>
+                        <li>Focused on UI consistency and web best practices</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Python Intern</h3>
+                    <p><strong>Oasis Infobyte</strong> | Remote | 1 month</p>
+                    <ul>
+                        <li>Developed a Password Generator tool for secure, customizable passwords</li>
+                        <li>Built a Python-based Calculator with functional programming practices</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>AI & Cloud Intern</h3>
+                    <p><strong>Edunet Foundation</strong> | Remote | 1 month</p>
+                    <ul>
+                        <li>Worked on AI & Cloud visualization tasks</li>
+                        <li>Gained hands-on exposure to cloud platforms and AI/ML visualization</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="achievements">
+                <h2>Achievements & Awards</h2>
+                
+                <div class="achievement-item">
+                    <span class="achievement-badge">🥇 1st Place</span>
+                    <h3>Internal Hackathon 2.0 (2024)</h3>
+                    <p><strong>Project: Green Nest - AI, IoT & Automation for Smarter Indoor Farming</strong></p>
+                    <ul>
+                        <li>Developed IoT-driven smart irrigation with soil moisture, temperature, and humidity sensors</li>
+                        <li>Implemented AI-based plant disease detection with image analysis</li>
+                        <li>Integrated UV light for growth enhancement and automated nutrition management</li>
+                        <li>Built real-time dashboard for monitoring irrigation, nutrition, and plant health</li>
+                        <li><strong>Impact:</strong> 40% reduced water waste, 25% increased crop yield, 90% disease detection accuracy</li>
+                    </ul>
+                </div>
+
+                <div class="achievement-item">
+                    <span class="achievement-badge">🥈 2nd Place</span>
+                    <h3>Internal SIH 2024</h3>
+                    <p>Earned for the Green Nest project showcasing innovation in smart agriculture</p>
+                </div>
+
+                <div class="achievement-item">
+                    <span class="achievement-badge">🥈 2nd Place</span>
+                    <h3>PRAYOG 2024</h3>
+                    <p>Recognized for technical excellence in the Green Nest IoT farming solution</p>
+                </div>
+
+                <div class="achievement-item">
+                    <span class="achievement-badge">🥇 1st Place</span>
+                    <h3>Robosync Robo Race (2023)</h3>
+                    <ul>
+                        <li>Designed and built competitive robot with wood/plastic body and battery-powered motors</li>
+                        <li>Equipped with metal hand/claw for object pickup with 360° rotation</li>
+                        <li>Demonstrated mechanical design, robotics integration, and control skills</li>
+                    </ul>
+                </div>
+
+                <div class="achievement-item">
+                    <span class="achievement-badge">⭐ Sales Excellence</span>
+                    <h3>Affiliate Marketing Success</h3>
+                    <p>Surpassed 3-month sales target of Meesho Content Creator Club in just one month, achieving 50%+ above goal through affiliate marketing</p>
+                </div>
+
+                <div class="achievement-item">
+                    <span class="achievement-badge">🥇 1st Place</span>
+                    <h3>Zion 2024 Zenith Dance Group</h3>
+                    <p>Achieved first place in dance competition, showcasing creativity and teamwork</p>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Projects & Publications</h2>
+                
+                <div class="project-item">
+                    <h3>📄 Research Publication: Predictive Modelling for Breast Cancer Diagnosis and Prognosis</h3>
+                    <p><strong>Co-Author</strong> | Published in IEEE Xplore, 2024</p>
+                    <p>Comprehensive review of predictive modeling techniques for breast cancer diagnosis and prognosis</p>
+                    <div class="project-links">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10593157" target="_blank">📖 View Publication →</a>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <h3>🎙️ LeetCode Hint Extension</h3>
+                    <p>AI-Powered Chrome Extension for LeetCode assistance with voice input and GPT-3.5/GPT-4/Gemini integration</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Disha0413/leetcode-AI-extention" target="_blank">💻 GitHub →</a>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <h3>🌐 App Dost Website Redesign</h3>
+                    <p>Completed company website redesign task with UI elements implemented in production site</p>
+                    <div class="project-links">
+                        <a href="https://github.com/disha041203/AppDost-clone" target="_blank">💻 GitHub →</a>
+                        <a href="https://68fdb813f29f226ebada0ed5--appdostclone.netlify.app/" target="_blank">🌐 Live Demo →</a>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <h3>⚡ Mini Projects</h3>
+                    <p>Various web development projects including Weather App and Calculator</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Disha0413/Weather-forecast" target="_blank">🌤️ Weather App →</a>
+                        <a href="https://github.com/Disha0413/calculator" target="_blank">🔢 Calculator →</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="volunteering">
+                <h2>Community Involvement</h2>
+                
+                <div class="experience-item">
+                    <h3>🌿 Environmental Volunteer</h3>
+                    <ul>
+                        <li><strong>Haridwar Cleanliness Campaign</strong> - Praharsh Eco Club (Sept 25, 2023)</li>
+                        <li><strong>Bajuheri Village Sanitation Drive</strong> - Applied 5% disinfectant solution (Nov 8, 2023)</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>🌍 Languages</h3>
+                    <p>Cleared HSK Level 1 & 2 (Mandarin Chinese) | Native Hindi speaker | Proficient in English</p>
+                </div>
+            </section>
+
+            <section id="certifications">
+                <h2>Certifications</h2>
+                <div class="cert-grid">
+                    <div class="cert-item"><strong>Google Cloud:</strong> Build Real World AI Applications with Gemini and Imagen</div>
+                    <div class="cert-item"><strong>Google Cloud:</strong> Build a Data Warehouse with BigQuery</div>
+                    <div class="cert-item"><strong>Google Cloud:</strong> Use Machine Learning APIs</div>
+                    <div class="cert-item"><strong>Google Cloud:</strong> Implement Load Balancing on Compute Engine</div>
+                    <div class="cert-item"><strong>Google Cloud:</strong> Configure Service Accounts and IAM Roles</div>
+                    <div class="cert-item"><strong>Google Cloud:</strong> App Building with AppSheet</div>
+                    <div class="cert-item"><strong>IBM:</strong> Generative AI in Action</div>
+                    <div class="cert-item"><strong>AWS:</strong> Kiro Getting Started</div>
+                    <div class="cert-item"><strong>Forage:</strong> AWS APAC Solutions Architecture Job Simulation</div>
+                    <div class="cert-item"><strong>Forage:</strong> Deloitte Australia Data Analytics Job Simulation</div>
+                    <div class="cert-item"><strong>Forage:</strong> J.P. Morgan Software Engineering Job Simulation</div>
+                    <div class="cert-item"><strong>Infosys Springboard:</strong> Certified Cyber Security & Applied Ethical Hacking</div>
+                    <div class="cert-item"><strong>MindLuster:</strong> Cloud Computing</div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Disha Saini. All rights reserved.</p>
+            <p style="margin-top: 10px;">Built with passion and code 💜</p>
+        </footer>
+    </div>
+</body>
+</html>
